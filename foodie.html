@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <title>Foodie</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <style>
+      body {
+          font-family: 'Roboto';font-size: 22px;
+      }
+      </style>
+
+    <link rel="stylesheet" href="foodie.css">
+  </head>
+
+  <body style="background-color: black;">
+
+
+    <div class="header">
+
+      <img src="preferences.png" class="menu">
+      <img src="kfc logo.png" class="kfc-logo">
+
+      <button class="delivery-button">
+        <b>DELIVERY</b>
+      </button>
+
+      <button class="pickup-button">
+        <b>PICKUP</b>
+      </button>
+
+      <button class="login-button">
+        <b>LOGIN</b>
+      </button>
+
+    </div>
+    
+    <!-- <div>
+      <img src="kfc-banner-image.jpg" class="kfc-banner-image">
+    </div> -->
+    <div class="carousel-wrap" id="carousel">
+      <div class="carousel-track" id="track">
+        <div class="slide"><img src="kfc-banner-image.jpg" class="kfc-banner-image"></div>
+        <div class="slide"><img src="kfc-banner-image2.jpg" class="kfc-banner-image"></div>
+        <div class="slide"><img src="kfc-banner-image3.jpg" class="kfc-banner-image"></div>
+      </div>
+      <button class="carousel-btn prev" onclick="move(-1)" aria-label="Previous">&#8592;</button>
+      <button class="carousel-btn next" onclick="move(1)" aria-label="Next">&#8594;</button>
+    </div>
+    <div class="dots" id="dots"></div>
+
+    <div>
+      <button class="reorder-button">
+        <b>REORDER</b>
+      </button>
+    </div>
+
+    <div class="container">
+
+      <div>
+       <h2 class="explore-menu"><u class="underliner-explo">EXPLO</u>RE MENU</h2>
+      </div>
+
+      <div class="menu-container">
+
+       <div class="meal1-div">
+
+         <button class="meal1-button">
+          <img src="meal-1.png" class="meal1" onclick="openPopup('chickenChipsPopup')">
+          <h6 class="everyday-value">Ever<u class="underlined-everyday">yday v</u>alue</h6>
+         </button>
+
+       </div>
+
+       <div class="meal2-div">
+
+         <button class="meal2-button">
+          <img src="meal-2.png" class="meal2" onclick="openPopup('chickenChipsPopup')">
+          <h6 class="ala-carte">Ala-Ca<u class="underlined-ala-carte">rte-&-C</u>ombos</h6>
+         </button>
+
+       </div>
+
+       <div class="meal1-div">
+
+        <button class="meal1-button" onclick="openPopup('chickenChipsPopup')">
+         <img src="meal-3.png" class="meal1">
+         <h6 class="everyday-value">P<u class="underlined-everyday">romotio</u>n</h6>
+        </button>
+
+      </div>
+
+      <div class="meal1-div">
+
+        <button class="meal1-button" onclick="openPopup('chickenChipsPopup')">
+         <img src="meal-4.png" class="meal1">
+         <h6 class="everyday-value">Sign<u class="underlined-everyday">atunre B</u>oxes</h6>
+        </button>
+
+      </div>
+
+      <div class="meal1-div">
+
+        <button class="meal1-button" onclick="openPopup('chickenChipsPopup')">
+         <img src="meal-5.png" class="meal1">
+         <h6 class="everyday-value"><u class="underlined-everyday">Sharing</u></h6>
+        </button>
+
+      </div>
+
+      </div>
+
+      <div>
+
+        <h2 class="explore-menu"><u class="underliner-explo">BEST </u>SELLERS</h2>
+
+      </div>
+
+      <div class="menu2-container">
+
+
+        <div class="best-seller-items">
+          <button class="best-seller-buttons" onclick="openPopup('krunchBurger')">
+            
+              <span class="span-red">bl</span>
+              <span class="span-red">bl</span>
+              <span class="span-red">bl</span>
+              
+              <span style="display: block;">KRUNCH BURGER</span>
+              <h5> <span class="money1" style="margin-bottom: 0px;">Rs.310</span> </h5>
+              <img src="best1c.png" class="best1img">
+            
+          </button>
+        </div>
+
+        <div class="best-seller-items">
+          <button class="best-seller-buttons" onclick="openPopup('krunchCombo')">
+            
+              <span class="span-red">bl</span>
+              <span class="span-red">bl</span>
+              <span class="span-red">bl</span>
+              
+              <span style="display: block;">KRUNCH  COMBO</span>
+              <h5> <span class="money1" style="margin-bottom: 0px;">Rs.420</span> </h5>
+              <img src="best2.png" class="best1img">
+            
+          </button>
+        </div>
+
+        <div class="best-seller-items">
+          <button class="best-seller-buttons" onclick="openPopup('chickenChips')">
+            
+              <span class="span-red">bl</span>
+              <span class="span-red">bl</span>
+              <span class="span-red">bl</span>
+              
+              <span style="display: block;">CHICKEN & CHIPS</span>
+              <h5> <span class="money1" style="margin-bottom: 0px;">Rs.530</span> </h5>
+              <img src="best3.png" class="best1img">
+            
+          </button>
+        </div>
+
+        <div class="best-seller-items" onclick="openPopup('hotWingsBucket')">
+          <button class="best-seller-buttons">
+              <span class="span-red">bl</span>
+              <span class="span-red">bl</span>
+              <span class="span-red">bl</span>
+              
+              <span style="display: block;">HOT WINGS BUCKET</span>
+              <h5> <span class="money1" style="margin-bottom: 0px;">Rs.640</span> </h5>
+              <img src="best4.png" class="best1img">
+            
+          </button>
+        </div>
+
+      </div>
+
+
+      <div>
+
+        <h2 class="explore-menu" ><u class="underliner-explo">TOP D</u>EALS</h2>
+
+      </div>
+
+      <div class="menu3-container">
+
+        <div class="best-seller-items">
+          <button class="best-seller-buttons" style="border-radius: 8px;" onclick="openPopup('zingerDeal1')">
+            
+              <span class="span-red">bl</span>
+              <span class="span-red">bl</span>
+              <span class="span-red">bl</span>
+              
+              
+              <img src="burger1.png" class="best1img">
+              <span style="display: block;">HOT WINGS BUCKET</span>
+
+              <p class="burger1-discription">1 Zinger Stacker + 1 Regular fries + 1 Regular drink</p>
+              <h5> <span class="money-menu3" >+ADD TO BUCKET</span></h5>
+          </button>
+        </div>
+
+        <div class="best-seller-items">
+          <button class="best-seller-buttons" style="border-radius: 8px;"  onclick="openPopup('zingerDeal2')">
+            
+              <span class="span-red">bl</span>
+              <span class="span-red">bl</span>
+              <span class="span-red">bl</span>
+              
+              
+              <img src="burger2.png" class="best1img">
+              <span style="display: block;">HOT WINGS BUCKET</span>
+
+              <p class="burger1-discription">1 Zinger Stacker + 1 Regular fries + 1 Regular drink</p>
+              <h5> <span class="money-menu3" >+ADD TO BUCKET</span> </h5>
+          </button>
+        </div>
+
+        <div class="best-seller-items">
+          <button class="best-seller-buttons" style="border-radius: 8px;" onclick="openPopup('zingerDeal3')">
+            
+              <span class="span-red">bl</span>
+              <span class="span-red">bl</span>
+              <span class="span-red">bl</span>
+              
+              
+              <img src="burger3.png" class="best1img">
+              <span style="display: block;">HOT WINGS BUCKET</span>
+
+              <p class="burger1-discription">1 Zinger Stacker + 1 Regular fries + 1 Regular drink</p>
+              <h5> <span class="money-menu3" style="vertical-align: top;">+ADD TO BUCKET</span></h5>
+          </button>
+        </div>
+
+      </div>
+
+      <div class="ads-div">
+
+        <div >
+          <img src="ad1.png" class="ads">
+        </div>
+
+        <div class="ads">
+          <img src="ad2.png" class="ads">
+        </div>
+
+      </div>
+    
+      
+    </div>
+
+    <div class="footer" style="background-color: rgb(30, 30, 30); margin-top: 50px; padding-bottom: 70px;">
+
+      <div style="padding-top:40px;">
+
+        <!-- <img src="copt.png" class="kfc-logo" style="margin-left: 40%;"> -->
+
+        <a href="#" class="fa fa-facebook" style="margin-left: 40%;"></a>
+
+        <a href="#" class="fa fa-instagram"></a>
+
+        <a href="#" class="fa fa-twitter"></a>
+
+      </div>
+
+      <div class="inner-footer" >
+        <div style="margin-top: 0px;">
+
+          <ul>
+            <a href=""><li>About</li></a>
+            <a href=""><li>mitao bhook</li></a>
+            <a href=""><li>privacy policy</li></a>
+            <a href=""><li>careers</li></a>
+          </ul>
+
+        </div>
+
+        <div style="margin-top: 0px;">
+
+          <ul>
+            <a href=""><li>Contact us</li></a>
+            <a href=""><li>Store locator</li></a>
+            <a href=""><li>Track order</li></a>
+          </ul>
+
+        </div>
+
+        <div style="margin-top: 0px;">
+
+          <ul>
+            <a href=""><li>Terms & conditions</li></a>
+          </ul>
+
+        </div>
+
+      </div>
+      <div class="last-div">
+        ALL RIGHTS RESERVED
+      </div>
+    </div>
+
+      <!-- <div id="chickenChipsPopup" class="popup-container">
+        <div class="popup-content">
+          <span class="close-btn" onclick="closePopup('chickenChipsPopup')">&times;</span>
+          <h2 class="underlined-everyday" style="text-decoration: underline; text-decoration-color: red;">Chicken & Chips</h2>
+          <p>2 pieces of hot and crispy fried chicken, fries, dinner roll, and sauce.</p>
+          <p><strong>Price: Rs. 620</strong></p>
+          <button class="add-to-bucket">Add to Bucket</button>
+        </div>
+      </div> -->
+      <div id="mainPopup" class="popup-container">
+        <div class="popup-content">
+          <span class="close-btn" onclick="closePopup()">&times;</span>
+          <h2 id="popup-title" style="text-decoration: underline; text-decoration-color: red;"></h2>
+          <p id="popup-description"></p>
+          <p><strong id="popup-price"></strong></p>
+          <button class="add-to-bucket">Add to Bucket</button>
+        </div>
+      </div>
+      <script src="foodie.js"></script>
+  </body>
+</html>
